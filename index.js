@@ -2,7 +2,7 @@
 //Esse é o nome do nosso herói
 const nomeDoHeroi = "ChrisJericho";
 // Essa variável representa o número de pontos de experiência do herói
-let xp = -1;
+let xp = 7001;
 // Esse é o nível do herói, baseado em pontos de experiência
 let nivel = "";
 

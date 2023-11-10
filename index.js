@@ -9,7 +9,7 @@ let nivel = "";
 // A atribuição do valor (string) à variável nivel se submete às seguintes declaraçÕes condicionais
 if (xp < 1000) {
     nivel = "Ferro";
-} else if (xp < 2000) {b
+} else if (xp < 2000) {
     nivel = "Bronze";
 } else if (xp < 5000) {
     nivel = "Prata";
@@ -23,7 +23,7 @@ if (xp < 1000) {
     nivel = "Imortal";
 } else {
     nivel = "Radiante";
-}
+};
 //A declaração console.log imprime a frase a seguir, incluindo o nome do herói e seu nível
 console.log("O Herói de nome " + nomeDoHeroi + " está no nível de " + nivel);
 

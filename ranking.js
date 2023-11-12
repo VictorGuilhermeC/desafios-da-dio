@@ -1,72 +1,79 @@
+
+/*Chama a função getRanking com os argumentos (arbitrários) 100 e 19*/
 getRanking (100, 19);
 
-
+/*Declaração da função getRanking, para calcular a diferença entre o número de vitórias e derrotas, além de definir o nível*/
 function getRanking(vitorias, perdas) {
- const saldoVitorias = vitorias - perdas;
- let nivel = "";
-if (saldoVitorias <= 10) {
-    nivel = "Ferro";
-} else if (saldoVitorias <= 20) {
-    nivel = "Bronze";
-} else if (saldoVitorias <= 50) {
-    nivel = "Prata";
-} else if (saldoVitorias <= 80) {
-    nivel = "Ouro";
-} else if (saldoVitorias <= 90) {
-    nivel = "Diamante";
-} else if (saldoVitorias <= 100) {
-    nivel = "Lendário";
-} else {
-    nivel = "Imortal";
-};
-console.log("O Herói tem de saldo de " + saldoVitorias + " e está no nível de " + nivel)
-}
-
-/*function getRanking(vitorias, perdas) {
+    //Declaração da variável da diferença entre vitórias e derrotas
     const saldoVitorias = vitorias - perdas;
+    //Declaração do nível. O valor (string) será definido adiante.
     let nivel = "";
-   
-    switch(true) {
-       case (saldoVitorias <= 10):
-           nivel = "Ferro";
-           break;
-       case (saldoVitorias <= 20):
-           nivel = "Bronze";
-           break;
-       case (saldoVitorias <= 50):
-           nivel = "Prata";
-           break;
-       case (saldoVitorias <= 80):
-           nivel = "Ouro";
-           break;
-       case (saldoVitorias <= 90):
-           nivel = "Diamante";
-           break;
-       case (saldoVitorias <= 100):
-           nivel = "Lendário";
-           break;
-       default:
-           nivel = "Imortal";
-   }
-   
-   console.log(`O Herói tem de saldo de ${saldoVitorias} e está no nível de ${nivel}`)/*
+
+    //Determina o nível do jogador baseado na diferença entre vitórias e derrotas*/
+    if (saldoVitorias <= 10) {
+        nivel = "Ferro";
+    } else if (saldoVitorias <= 20) {
+        nivel = "Bronze";
+    } else if (saldoVitorias <= 50) {
+        nivel = "Prata";
+    } else if (saldoVitorias <= 80) {
+        nivel = "Ouro";
+    } else if (saldoVitorias <= 90) {
+        nivel = "Diamante";
+    } else if (saldoVitorias <= 100) {
+        nivel = "Lendário";
+    } else {
+        nivel = "Imortal";
+    };
+
+    // Output: imprime no terminal a seguinte frase, conforme o saldo de vitórias e o nível    
+    console.log("O Herói tem de saldo de " + saldoVitorias + " e está no nível de " + nivel);
+}
 
 
 
 /*
-Crie uma função que recebe como parâmetro a quantidade de vitórias e derrotas de um jogador,
-depois disso retorne o resultado para uma variável, o saldo de Rankeadas deve ser feito através do calculo (vitórias - derrotas)
 
-Se vitórias for menor do que 10 = Ferro
-Se vitórias for entre 11 e 20 = Bronze
-Se vitórias for entre 21 e 50 = Prata
-Se vitórias for entre 51 e 80 = Ouro
-Se vitórias for entre 81 e 90 = Diamante
-Se vitórias for entre 91 e 100= Lendário
-Se vitórias for maior ou igual a 101 = Imortal
 
-## Saída
 
-Ao final deve se exibir uma mensagem:
-"O Herói tem de saldo de **{saldoVitorias}** está no nível de **{nivel}**
+//Soluçao alternativa:
+
+const nivel = ["Ferro", "Bronze", "Prata", "Ouro", "Diamante", "Lendário", "Imortal"]
+let i = 0;
+let balance = getBalance(100, 19);
+let ranking = getRanking(balance);
+console.log(`O Herói tem de saldo de ${balance} e está no nível de ${nivel[i]}`);
+
+
+
+function getBalance(vitorias, derrotas){
+    return vitorias - derrotas;
+}
+function getRanking(balance){
+    switch (true){
+        case balance <=10:
+            i = 0; 
+        break;
+        case balance <=20:
+            i = 1; 
+        break;
+        case balance <=50:
+            i = 2; 
+        break;
+        case balance <=80:
+            i = 3; 
+        break;
+        case balance <=90:
+            i = 4; 
+        break;
+        case balance <=100:
+            i = 5; 
+        break;
+        default:
+            i = 6; 
+        break;
+
+    }
+}
+
 */
